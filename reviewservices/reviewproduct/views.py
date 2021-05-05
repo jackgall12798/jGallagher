@@ -7,4 +7,9 @@ def contact(request) :
     return render(request, 'reviewproduct/contact.html', {'title':'Contact Us'})
 def product(request) :
     return render(request, 'reviewproduct/product.html', {'title':'Product Page'})
+
+#def product (request) :
+#    product_info= {
+#       :  Product.objects.all()
+#    }
 # Create your views here.
