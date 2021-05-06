@@ -1,10 +1,6 @@
 from django.shortcuts import render
 from .models import Review
-<<<<<<< HEAD
-from .models import Product 
-=======
 from .models import Product
->>>>>>> 5c0a566db2634932637d369bc70b799a7e60c9be
 def home(request) :
      return render(request, 'reviewproduct/home.html', {'title':'Home Page '})
 def about(request) :
@@ -17,13 +13,22 @@ def contact(request) :
 def product(request) :
        review_info= {
        'reviews': Review.objects.all(),
-<<<<<<< HEAD
-       'products': Product.objects.all()
-=======
        'products': Product.objects.all()  
->>>>>>> 5c0a566db2634932637d369bc70b799a7e60c9be
        }
       
        return render(request, 'reviewproduct/product.html', review_info)
+def ipad(request) :
+       review_info= {
+       'reviews': Review.objects.all(),
+       'products': Product.objects.all()  
+       }
+      
+       return render(request, 'reviewproduct/Ipad.html', review_info)
 
-
+def sonytv(request) :
+       review_info= {
+       'reviews': Review.objects.all(),
+       'products': Product.objects.all()  
+       }
+      
+       return render(request, 'reviewproduct/sonytv.html', review_info)
