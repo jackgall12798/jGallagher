@@ -1,6 +1,16 @@
 {% extends "reviewproduct/base.html" %}
 {% block content %}
 <h1>Product Page Electronics</h1>
+{% for product in products %}
+{% if product.name == "IPhone 12 Pro" %}
+<p>Brand: {{ product.brand }}</p>
+<p>Cost:£{{ product.cost }}</p>
+<p>Category: {{ product.category }}</p>
+<p>Released: {{ product.date_released }}</p>
+<p>Description: {{ product.description }}</p>
+<img src="{{product.photo.url}}">
+{% endif %}
+{% endfor %}
 {% for review in reviews %}
 <article class="media content-section">
 
