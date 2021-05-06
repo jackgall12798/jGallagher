@@ -12,8 +12,9 @@
   {% endif %}
 {% endfor %}
 {% for review in reviews %}
+{% if review.product.name == "Ipad Pro" %}
 <article class="media content-section">
-
+  <img class="rounded-circle article-img" src="{{review.author.profile.photo.url}}"/>
     <div class="media-body">
   
       <div class="article-metadata">
@@ -31,5 +32,6 @@
     </div>
   
   </article>
+  {% endif %}
   {% endfor %}
 {% endblock content %}

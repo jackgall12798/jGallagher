@@ -32,6 +32,7 @@ def __str__(self) :
 class Review(models.Model) :
      
       author=models.ForeignKey(User, on_delete=models.CASCADE)
+      product=models.ForeignKey(Product, null=True, on_delete=models.CASCADE)
       rating=models.IntegerField()
       review=models.TextField()
       date_submitted=models.DateTimeField(default=timezone.now)
