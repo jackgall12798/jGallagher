@@ -1,4 +1,25 @@
 {% extends "reviewproduct/base.html" %}
 {% block content %}
 <h1>Product Page Electronics</h1>
+{% for review in reviews %}
+<article class="media content-section">
+
+    <div class="media-body">
+  
+      <div class="article-metadata">
+  
+        <a class="mr-2" href="#">{{ review.author }} )</a>
+  
+        <small class="text-muted">{{ review.date_submitted}}</small>
+  
+      </div>
+  
+      <h2><a class="article-title" href="#"> Rating {{review.rating}}</a></h2>
+  
+      <p class="article-content">{{ review.review }}</p>
+  
+    </div>
+  
+  </article>
+  {% endfor %}
 {% endblock content %}
