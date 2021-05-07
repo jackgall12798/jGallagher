@@ -94,7 +94,11 @@ a.article-title:hover {
 
 }
 
- 
+.img {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 .article-img {
 

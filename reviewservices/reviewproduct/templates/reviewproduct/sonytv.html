@@ -3,17 +3,19 @@
 {% for product in products %}
 {% if product.name == "SONY 4k Tv" %}
   <h2>{{product.name}}</h2>
+  <img src="{{product.photo.url}}" style="width:100%">
   <p>Brand:{{product.brand}}</p>
   <p>Cost:£{{product.cost}}</p>
   <p>Category:{{product.category}}</p>
   <p>Released:{{product.date_released}}</p>
   <p>Description:{{product.description}}</p>
-  <img src="{{product.photo.url}}">
+  
   {% endif %}
 {% endfor %}
 {% for review in reviews %}
+{% if review.product.name == "SONY 4k Tv" %}
 <article class="media content-section">
-
+  <img class="rounded-circle article-img" src="{{review.author.profile.photo.url}}"/>
     <div class="media-body">
   
       <div class="article-metadata">
@@ -31,5 +33,6 @@
     </div>
   
   </article>
+  {% endif %}
   {% endfor %}
 {% endblock content %}
